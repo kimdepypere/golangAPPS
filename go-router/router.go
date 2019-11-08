@@ -47,6 +47,7 @@ func (s *Router) PUT(path string, f http.HandlerFunc) {
 	s.handlers[key("PUT", path)] = f
 }
 
+// function key
 func key(method, path string) string {
 	return fmt.Sprintf("%s:%s", method, path)
 }
