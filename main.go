@@ -9,13 +9,12 @@ import (
 )
 
 func main() {
-	testInterpreter()
+	fmt.Print(testInterpreter())
 }
 
-func testInterpreter() {
-	//output := strings.Join(configAnalyser.FindAllInMap()[configAnalyser.Interfaces], "\n")
+func testInterpreter() string {
 	output := strings.Join(configAnalyser.FindAll()[configAnalyser.Interfaces], "\n")
-	fmt.Print(output)
+	return output
 }
 
 func testWebserver() {
